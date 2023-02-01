@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-
+const randomColor = function getRandomColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
 
 export const StatisticsCard = styled.section`
 display: flex;
@@ -20,22 +22,6 @@ export const StatList = styled.ul`
 display: flex;
 list-style: none;
 padding: 0;
-
-& li:nth-of-type(1) {
-  background-color: gray;
-}
-& li:nth-of-type(2) {
-  background-color: lightblue;
-}
-& li:nth-of-type(3) {
-  background-color: lightgreen;
-}
-& li:nth-of-type(4) {
-  background-color: blueviolet;
-}
-& li:nth-of-type(5) {
-  background-color: lightpink;
-};
 `;
 
 export const StatisticItem = styled.li`
@@ -44,5 +30,6 @@ flex-direction: column;
 align-items: center;
 padding: 10px;
 color: white;
+background-color: ${randomColor};
 `
 
